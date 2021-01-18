@@ -19,11 +19,11 @@ resource "aws_instance" "artifactory" {
   instance_type = "t3.medium"
   
   network_interface {
-    network_interface_id = aws_network_interface.foo.id
+    network_interface_id = aws_network_interface.devops.id
     device_index         = 0
   }
 
   tags = {
-    Name = "HelloWorld"
+    Name = "devops"
   }
 }

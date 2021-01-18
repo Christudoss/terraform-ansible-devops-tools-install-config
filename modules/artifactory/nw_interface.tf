@@ -1,8 +1,8 @@
-resource "aws_network_interface" "foo" {
-  subnet_id   = aws_subnet.devops_subnet.id
+resource "aws_network_interface" "devops" {
+  subnet_id   = var.subnet_id
   private_ips = ["172.16.10.100"]
 
   tags = {
-    Name = "primary_network_interface"
+    Name = "artifactory_network_interface"
   }
 }
