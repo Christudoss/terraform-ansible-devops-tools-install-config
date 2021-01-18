@@ -1,5 +1,5 @@
 resource "aws_security_group" "artifactory" {
-  name        = "allow_tls"
+  name        = "allow_artifactory"
   description = "Allow inbound traffic"
   vpc_id      = var.vpc_id
 
@@ -8,7 +8,7 @@ resource "aws_security_group" "artifactory" {
     from_port   = 0
     to_port     = 8981-8082
     protocol    = "tcp"
-    cidr_blocks = [aws_vpc.main.cidr_block]
+    cidr_blocks = [var.cidr_block]
   }
 
   ingress {
