@@ -15,6 +15,7 @@ resource "aws_subnet" "devops" {
   availability_zone = data.aws_availability_zones.available.names[count.index]
   cidr_block        = "172.16.${count.index}.0/24"
   vpc_id            = aws_vpc.devops.id
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "devops"

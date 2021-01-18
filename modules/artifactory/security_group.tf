@@ -5,16 +5,16 @@ resource "aws_security_group" "artifactory" {
 
   ingress {
     description = "Ingress from VPC"
-    from_port   = 0
-    to_port     = 8981-8082
+    from_port   = 8081
+    to_port     = 8082
     protocol    = "tcp"
     cidr_blocks = [var.cidr_block]
   }
 
   ingress {
     description = "Ingress from VPC"
-    from_port   = 0
-    to_port     = 8981-8082
+    from_port   = 8081
+    to_port     = 8082
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
