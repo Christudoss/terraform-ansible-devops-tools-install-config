@@ -74,7 +74,7 @@ resource "aws_instance" "artifactory" {
       "sudo apt -y install ansible",
       "sudo ansible-galaxy collection install jfrog.installers", 
     #  "cd ansible; ansible-playbook -c local -i \"localhost,\" playbook.yml",
-      "cd ansible; ansible-playbook -c local -i \"inventory.yml,\" playbook.yml",
+      "cd ansible; ansible-playbook -c local -i "inventory.yml," playbook.yml",
     ]
 
     connection {
